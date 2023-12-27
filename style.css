@@ -1,5 +1,114 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.container {
+  /* border: 2px solid black; */
+}
+
+/* styling of header  */
+.main-header {
+  text-align: center;
+  padding: 0.8em;
+}
+
+.main-title {
+  font-size: 2.6em;
+  margin-bottom: 0.1rem;
+}
+
+.title-description {
+  font-style: italic;
+}
+
+.intro-title {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+
+.intro-text {
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  padding: 0.4em;
+  /* hide this element now  */
+  display: none;
+}
+
+/* hide navbar on mobile  */
+.main-nav {
+  display: none;
+}
+
+/* styles of image cards on mobile  */
+
+.wrapper-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 400px;
+  gap: 0.2em;
+  margin-bottom: 1em;
+  padding: 0.2em;
+}
+.card-img {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+/* hides list of events if empty  */
+.next-events li:empty {
+  display: none;
+}
+
+/* content modification for large screens */
+@media (min-width: 5000px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  /* hide navbar */
+  .main-nav {
+    display: block;
+    margin-bottom: 0.8em;
+  }
+
+  /* navbar styles  */
+  .flex-container {
+    display: flex;
+    max-width: 70%;
+    margin: auto;
+    padding: 0.5em 0 0.5em 0;
+  }
+
+  .flex-container li {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .wrapper-cards {
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .card {
+    max-width: 400px;
+  }
+
+  .card-img {
+    margin-top: auto;
+  }
 }
